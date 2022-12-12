@@ -117,7 +117,6 @@ $footer-bg: rgb(0, 56, 80);
 }
 
 .member {
-  border: 1px solid #000;
   padding-top: 60px;
   &__body {
     background: linear-gradient(90deg, $first-color 0%, $second-color 100%) 0
