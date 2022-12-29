@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^9.15.0",
     "pinia": "^2.0.26",
     "sass": "^1.56.2",
     "scss": "^0.2.4",

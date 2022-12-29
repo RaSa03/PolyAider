@@ -1,0 +1,26 @@
+@import "./components.scss";
+.header {
+  // border-radius: 0 0 10px 10px;
+  color: $third-color;
+  background: linear-gradient(135deg, $first-color 0%, $second-color 100%);
+  .container {
+    padding: 20px 20px;
+  }
+  &-title {
+    text-shadow: 0px 3px 10px $shadow-color;
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    .body__elements {
+      display: flex;
+      flex: 1 0 auto;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .body-el {
+        font-size: $fz20;
+      }
+    }
+  }
+}
