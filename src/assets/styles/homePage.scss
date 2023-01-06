@@ -1,14 +1,5 @@
 @import "./components.scss";
 
-.wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  .content {
-    flex: 1 0 auto;
-  }
-}
-
 .window-text {
   font-weight: normal;
 }
@@ -61,7 +52,7 @@
       opacity: 0.9;
       padding: 30px;
       border-radius: 20px;
-      box-shadow: 2px -2px 7px $shadow-color;
+      box-shadow: 0px 2px 7px 1px $shadow-color;
 
       .subj-title-btn {
         margin: 30px 0;
@@ -84,7 +75,10 @@
         opacity: 0.9;
         padding: 20px;
         border-radius: 20px;
-        box-shadow: 2px -2px 7px $shadow-color;
+        box-shadow: 0px 2px 7px 1px $shadow-color;
+        &:hover {
+          box-shadow: none;
+        }
       }
       .subj-ico {
         width: 80px;

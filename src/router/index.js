@@ -16,6 +16,7 @@ const routes = [
   },
   {
     path: "/categories/:id",
+    name: "SubjectPage",
     component: SubjectPage,
   },
 ];

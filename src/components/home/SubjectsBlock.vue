@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template lang="">
-  <div class="subjects" id="subjects">
+  <div class="subjects">
     <div class="container">
-      <div class="subjects__body">
+      <div class="subjects__body" id="subjects">
         <div class="subjects__body-title window">
           <h2>Материалы по учебным предметам, конспекты , лабороторные</h2>
           <router-link to="categories" class="btn subj-title-btn"

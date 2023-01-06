@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyDmWxJ8U0vm-AinAXZ-rXvH3-Vn_-k4Sak",
   authDomain: "polyaider.firebaseapp.com",
@@ -9,6 +10,7 @@ const firebaseConfig = {
   appId: "1:142895388850:web:dd0b1488988ca23e6591ab",
   measurementId: "G-FQ90CY412Q",
 };
-
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+export default db;
 const analytics = getAnalytics(app);
