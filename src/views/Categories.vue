@@ -1,33 +1,26 @@
 <template lang="">
-  <div class="wrapper">
-    <header-block />
-    <div class="content">
-      <div class="container">
-        <div class="content__body">
-          <v-stand
-            v-for="(sub, index) in SubjectsList"
-            :key="index"
-            @click="goToPage(sub.id)"
-          >
-            {{ sub.name }}
-          </v-stand>
-        </div>
-      </div>
+  <div class="container">
+    <div class="content__body">
+      <v-stand
+        v-for="(sub, index) in SubjectsList"
+        :key="index"
+        @click="goToPage(sub.id)"
+      >
+        {{ sub.name }}
+      </v-stand>
     </div>
-    <footer-block />
   </div>
 </template>
 
 <script setup>
 import { useFirebaseDb } from "../stores/fbData";
-import { useRouter } from "vue-router";
-import FooterBlock from "@/components/FooterBlock.vue";
-import HeaderBlock from "@/components/HeaderBlock.vue";
+import { useRoute, useRouter } from "vue-router";
 import VStand from "@/components/VStand.vue";
 import { onMounted, ref } from "vue";
 const router = useRouter();
+const route = useRoute();
 const goToPage = (goto) => {
-  router.push(`categories/${goto}`);
+  router.push(`${route.fullPath}/${goto}`);
 };
 
 const SubjectsList = useFirebaseDb().SubjectsList;
